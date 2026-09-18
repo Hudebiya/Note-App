@@ -212,7 +212,7 @@ export default function Dashboard({ user, onLogout }) {
                 {notes.map((note) => (
                   <div
                     key={note.id}
-                    className={`rounded-xl overflow-hidden shadow-sm border transition-colors duration-300 hover:border-amber-600/50 ${
+                    className={`${note.id === editingId ? 'hidden' : ''} rounded-xl overflow-hidden shadow-sm border transition-colors duration-300 hover:border-amber-600/50 ${
                       isDarkMode
                         ? 'bg-stone-900/90 border-stone-700'
                         : 'bg-white/90 border-stone-300'
